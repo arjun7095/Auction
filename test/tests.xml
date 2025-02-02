@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="9" time="0.078" timestamp="2025-02-02T15:37:24.747431+05:30" hostname="arjun"><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem ipsum-Lorem ipsum]" file="tests\test_email_anonymizer.py" line="17" time="0.001" /><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem ipsum a@a.com dolor sit amet-Lorem ipsum a@a.com dolor sit amet]" file="tests\test_email_anonymizer.py" line="17" time="0.001"><failure message="AssertionError: assert 'Lorem ipsum ...olor sit amet' == 'Lorem ipsum ...olor sit amet'&#10;  &#10;  - Lorem ipsum a@a.com dolor sit amet&#10;  ?             --- ^^^&#10;  + Lorem ipsum ... dolor sit amet&#10;  ?              ^^">text = 'Lorem ipsum a@a.com dolor sit amet', replaced = 'Lorem ipsum a@a.com dolor sit amet'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert 'Lorem ipsum ...olor sit amet' == 'Lorem ipsum ...olor sit amet'
+E         
+E         - Lorem ipsum a@a.com dolor sit amet
+E         ?             --- ^^^
+E         + Lorem ipsum ... dolor sit amet
+E         ?              ^^
+
+test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem ipsum --@--.---Lorem ipsum --@--.--]" file="tests\test_email_anonymizer.py" line="17" time="0.001" /><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem some@data ipsum-Lorem some@data ipsum]" file="tests\test_email_anonymizer.py" line="17" time="0.000" /><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem B@bb12.com ipsum-Lorem ...@bb12.com ipsum]" file="tests\test_email_anonymizer.py" line="17" time="0.001"><failure message="AssertionError: assert 'Lorem ... ipsum' == 'Lorem ...@bb12.com ipsum'&#10;  &#10;  - Lorem ...@bb12.com ipsum&#10;  ?          ---------&#10;  + Lorem ... ipsum">text = 'Lorem B@bb12.com ipsum', replaced = 'Lorem ...@bb12.com ipsum'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert 'Lorem ... ipsum' == 'Lorem ...@bb12.com ipsum'
+E         
+E         - Lorem ...@bb12.com ipsum
+E         ?          ---------
+E         + Lorem ... ipsum
+
+test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem abc-abc@abc.edu.co.uk am-Lorem abc-abc@abc.edu.co.uk am]" file="tests\test_email_anonymizer.py" line="17" time="0.001"><failure message="AssertionError: assert 'Lorem ... am' == 'Lorem abc-ab....edu.co.uk am'&#10;  &#10;  - Lorem abc-abc@abc.edu.co.uk am&#10;  + Lorem ... am">text = 'Lorem abc-abc@abc.edu.co.uk am', replaced = 'Lorem abc-abc@abc.edu.co.uk am'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert 'Lorem ... am' == 'Lorem abc-ab....edu.co.uk am'
+E         
+E         - Lorem abc-abc@abc.edu.co.uk am
+E         + Lorem ... am
+
+test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem cBa-abC@abc.edu.co.uk. dolor-Lorem ...@abc.edu.co.uk. dolor]" file="tests\test_email_anonymizer.py" line="17" time="0.000"><failure message="AssertionError: assert 'Lorem .... dolor' == 'Lorem ...@ab....co.uk. dolor'&#10;  &#10;  - Lorem ...@abc.edu.co.uk. dolor&#10;  + Lorem .... dolor">text = 'Lorem cBa-abC@abc.edu.co.uk. dolor', replaced = 'Lorem ...@abc.edu.co.uk. dolor'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert 'Lorem .... dolor' == 'Lorem ...@ab....co.uk. dolor'
+E         
+E         - Lorem ...@abc.edu.co.uk. dolor
+E         + Lorem .... dolor
+
+test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem dsad BB12@BB-12.COM. dolor-Lorem dsad ...@BB-12.COM. dolor]" file="tests\test_email_anonymizer.py" line="17" time="0.001"><failure message="AssertionError: assert 'Lorem dsad .... dolor' == 'Lorem dsad ....12.COM. dolor'&#10;  &#10;  - Lorem dsad ...@BB-12.COM. dolor&#10;  ?               ------ ----&#10;  + Lorem dsad .... dolor">text = 'Lorem dsad BB12@BB-12.COM. dolor', replaced = 'Lorem dsad ...@BB-12.COM. dolor'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert 'Lorem dsad .... dolor' == 'Lorem dsad ....12.COM. dolor'
+E         
+E         - Lorem dsad ...@BB-12.COM. dolor
+E         ?               ------ ----
+E         + Lorem dsad .... dolor
+
+test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem XXd -abc_ABC@abc.edu. dolor-Lorem XXd -...@abc.edu. dolor]" file="tests\test_email_anonymizer.py" line="17" time="0.001"><failure message="AssertionError: assert 'Lorem XXd .... dolor' == 'Lorem XXd -....bc.edu. dolor'&#10;  &#10;  - Lorem XXd -...@abc.edu. dolor&#10;  ?           -   ---- ----&#10;  + Lorem XXd .... dolor">text = 'Lorem XXd -abc_ABC@abc.edu. dolor', replaced = 'Lorem XXd -...@abc.edu. dolor'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert 'Lorem XXd .... dolor' == 'Lorem XXd -....bc.edu. dolor'
+E         
+E         - Lorem XXd -...@abc.edu. dolor
+E         ?           -   ---- ----
+E         + Lorem XXd .... dolor
+
+test_email_anonymizer.py:21: AssertionError</failure></testcase></testsuite></testsuites>

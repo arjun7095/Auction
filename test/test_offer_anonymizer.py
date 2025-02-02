@@ -3,7 +3,7 @@ import sys
 import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from anonymizers.offer_anonymizer import OfferAnonymizer
+from anonymizer.offer_anonymizer import OfferAnonymizer
 
 class TestOfferAnonymizer(unittest.TestCase):
     def test_combined_anonymization(self):

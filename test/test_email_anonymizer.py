@@ -3,7 +3,7 @@ import sys
 import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from anonymizers.email_anonymizer import EmailAnonymizer
+from anonymizer.email_anonymizer import EmailAnonymizer
 
 class TestEmailAnonymizer(unittest.TestCase):
     def test_valid_emails(self):

@@ -1,7 +1,7 @@
 import re
-from anonymizers.email_anonymizer import EmailAnonymizer
-from anonymizers.phone_anonymizer import PhoneAnonymizer
-from anonymizers.skype_anonymizer import SkypeAnonymizer
+from anonymizer.email_anonymizer import EmailAnonymizer
+from anonymizer.phone_anonymizer import PhoneAnonymizer
+from anonymizer.skype_anonymizer import SkypeAnonymizer
 
 class OfferAnonymizer:
     @staticmethod

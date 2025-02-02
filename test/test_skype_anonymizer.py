@@ -3,7 +3,7 @@ import sys
 import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from anonymizers.skype_anonymizer import SkypeAnonymizer
+from anonymizer.skype_anonymizer import SkypeAnonymizer
 
 class TestSkypeAnonymizer(unittest.TestCase):
     def test_valid_skype_usernames(self):

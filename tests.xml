@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="18" skipped="0" tests="47" time="0.509" timestamp="2023-02-04T02:41:58.300482" hostname="task-pycharm-c-9784-18-5c7d584586-kqjxp"><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem ipsum-Lorem ipsum]" file="tests/test_email_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem ipsum'">text = 'Lorem ipsum', replaced = 'Lorem ipsum'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem ipsum'
+
+tests/test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem ipsum a@a.com dolor sit amet-Lorem ipsum ...@a.com dolor sit amet]" file="tests/test_email_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem ipsum ...@a.com dolor sit amet'">text = 'Lorem ipsum a@a.com dolor sit amet'
+replaced = 'Lorem ipsum ...@a.com dolor sit amet'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem ipsum ...@a.com dolor sit amet'
+
+tests/test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem ipsum --@--.---Lorem ipsum --@--.--]" file="tests/test_email_anonymizer.py" line="17" time="0.001"><failure message="AssertionError: assert None == 'Lorem ipsum --@--.--'">text = 'Lorem ipsum --@--.--', replaced = 'Lorem ipsum --@--.--'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem ipsum --@--.--'
+
+tests/test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem some@data ipsum-Lorem some@data ipsum]" file="tests/test_email_anonymizer.py" line="17" time="0.001"><failure message="AssertionError: assert None == 'Lorem some@data ipsum'">text = 'Lorem some@data ipsum', replaced = 'Lorem some@data ipsum'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem some@data ipsum'
+
+tests/test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem B@bb12.com ipsum-Lorem ...@bb12.com ipsum]" file="tests/test_email_anonymizer.py" line="17" time="0.001"><failure message="AssertionError: assert None == 'Lorem ...@bb12.com ipsum'">text = 'Lorem B@bb12.com ipsum', replaced = 'Lorem ...@bb12.com ipsum'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem ...@bb12.com ipsum'
+
+tests/test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem abc-abc@abc.edu.co.uk am-Lorem ...@abc.edu.co.uk am]" file="tests/test_email_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem ...@abc.edu.co.uk am'">text = 'Lorem abc-abc@abc.edu.co.uk am', replaced = 'Lorem ...@abc.edu.co.uk am'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem ...@abc.edu.co.uk am'
+
+tests/test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem cBa-abC@abc.edu.co.uk. dolor-Lorem ...@abc.edu.co.uk. dolor]" file="tests/test_email_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem ...@abc.edu.co.uk. dolor'">text = 'Lorem cBa-abC@abc.edu.co.uk. dolor'
+replaced = 'Lorem ...@abc.edu.co.uk. dolor'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem ...@abc.edu.co.uk. dolor'
+
+tests/test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem dsad BB12@BB-12.COM. dolor-Lorem dsad ...@BB-12.COM. dolor]" file="tests/test_email_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem dsad ...@BB-12.COM. dolor'">text = 'Lorem dsad BB12@BB-12.COM. dolor'
+replaced = 'Lorem dsad ...@BB-12.COM. dolor'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem dsad ...@BB-12.COM. dolor'
+
+tests/test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_email_anonymizer" name="test_anonymize_text[Lorem XXd -abc_ABC@abc.edu. dolor-Lorem XXd -...@abc.edu. dolor]" file="tests/test_email_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem XXd -...@abc.edu. dolor'">text = 'Lorem XXd -abc_ABC@abc.edu. dolor'
+replaced = 'Lorem XXd -...@abc.edu. dolor'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = EmailAnonymizer("...")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem XXd -...@abc.edu. dolor'
+
+tests/test_email_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_offer_anonymizer" name="test_anonymize_text[anonymizers0-Lorem ipsum a@a.com. &lt;a href=&quot;skype:loremipsum?call&quot;&gt;call&lt;/a&gt; +48 666777888-Lorem ipsum a@a.com. &lt;a href=&quot;skype:loremipsum?call&quot;&gt;call&lt;/a&gt; +48 666777888]" file="tests/test_offer_anonymizer.py" line="29" time="0.002" /><testcase classname="tests.test_offer_anonymizer" name="test_anonymize_text[anonymizers1-Lorem ipsum a@a.com. &lt;a href=&quot;skype:loremipsum?call&quot;&gt;call&lt;/a&gt; +48 666777888-Lorem ipsum REPLACED@a.com. &lt;a href=&quot;skype:REPLACED?call&quot;&gt;call&lt;/a&gt; +48 6667778XX]" file="tests/test_offer_anonymizer.py" line="29" time="0.002"><failure message="assert None == ('Lorem ipsum REPLACED@a.com. &lt;a href=&quot;skype:REPLACED?call&quot;&gt;call&lt;/a&gt; +48 '\n '6667778XX')">anonymizers = (&lt;anonymizer.email_anonymizer.EmailAnonymizer object at 0x7f84e171f100&gt;, &lt;anonymizer.skype_anonymizer.SkypeUsernameAnonymizer object at 0x7f84e16e3b80&gt;, &lt;anonymizer.phone_anonymizer.PhoneNumberAnonymizer object at 0x7f84e16e3af0&gt;)
+text = 'Lorem ipsum a@a.com. &lt;a href="skype:loremipsum?call"&gt;call&lt;/a&gt; +48 666777888'
+replaced = 'Lorem ipsum REPLACED@a.com. &lt;a href="skype:REPLACED?call"&gt;call&lt;/a&gt; +48 6667778XX'
+
+    @pytest.mark.parametrize("anonymizers,text,replaced", TEST_DATA)
+    def test_anonymize_text(anonymizers, text, replaced):
+        offer_anonymizer = OfferAnonymizer()
+        for anonymizer in anonymizers:
+            offer_anonymizer.add_anonymizer(anonymizer)
+&gt;       assert offer_anonymizer.anonymize(text) == replaced
+E       assert None == ('Lorem ipsum REPLACED@a.com. &lt;a href="skype:REPLACED?call"&gt;call&lt;/a&gt; +48 '\n '6667778XX')
+
+tests/test_offer_anonymizer.py:35: AssertionError</failure></testcase><testcase classname="tests.test_offer_anonymizer" name="test_class" file="tests/test_offer_anonymizer.py" line="37" time="0.001"><failure message="assert False&#10; +  where False = issubclass(OfferAnonymizer, BaseAnonymizer)">def test_class():
+&gt;       assert issubclass(OfferAnonymizer, BaseAnonymizer)
+E       assert False
+E        +  where False = issubclass(OfferAnonymizer, BaseAnonymizer)
+
+tests/test_offer_anonymizer.py:39: AssertionError</failure></testcase><testcase classname="tests.test_phone_anonymizer" name="test_anonymize_text[X-3-Lorem ipsum-Lorem ipsum]" file="tests/test_phone_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem ipsum'">replacement = 'X', last_digits = 3, text = 'Lorem ipsum'
+replaced = 'Lorem ipsum'
+
+    @pytest.mark.parametrize("replacement,last_digits,text,replaced", TEST_DATA)
+    def test_anonymize_text(replacement, last_digits, text, replaced):
+        anonymizer = PhoneNumberAnonymizer(replacement, last_digits)
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem ipsum'
+
+tests/test_phone_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_phone_anonymizer" name="test_anonymize_text[X-0-Lorem +48 666666666 d00r-Lorem +48 666666666 d00r]" file="tests/test_phone_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem +48 666666666 d00r'">replacement = 'X', last_digits = 0, text = 'Lorem +48 666666666 d00r'
+replaced = 'Lorem +48 666666666 d00r'
+
+    @pytest.mark.parametrize("replacement,last_digits,text,replaced", TEST_DATA)
+    def test_anonymize_text(replacement, last_digits, text, replaced):
+        anonymizer = PhoneNumberAnonymizer(replacement, last_digits)
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem +48 666666666 d00r'
+
+tests/test_phone_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_phone_anonymizer" name="test_anonymize_text[X-3-Lorem +48 666666666 d11r-Lorem +48 666666XXX d11r]" file="tests/test_phone_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem +48 666666XXX d11r'">replacement = 'X', last_digits = 3, text = 'Lorem +48 666666666 d11r'
+replaced = 'Lorem +48 666666XXX d11r'
+
+    @pytest.mark.parametrize("replacement,last_digits,text,replaced", TEST_DATA)
+    def test_anonymize_text(replacement, last_digits, text, replaced):
+        anonymizer = PhoneNumberAnonymizer(replacement, last_digits)
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem +48 666666XXX d11r'
+
+tests/test_phone_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_phone_anonymizer" name="test_anonymize_text[*-3-Lorem +48 666666666, +48 777777777 sit 888888888 amet-Lorem +48 666666***, +48 777777*** sit 888888888 amet]" file="tests/test_phone_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem +48 666666***, +48 777777*** sit 888888888 amet'">replacement = '*', last_digits = 3
+text = 'Lorem +48 666666666, +48 777777777 sit 888888888 amet'
+replaced = 'Lorem +48 666666***, +48 777777*** sit 888888888 amet'
+
+    @pytest.mark.parametrize("replacement,last_digits,text,replaced", TEST_DATA)
+    def test_anonymize_text(replacement, last_digits, text, replaced):
+        anonymizer = PhoneNumberAnonymizer(replacement, last_digits)
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem +48 666666***, +48 777777*** sit 888888888 amet'
+
+tests/test_phone_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_skype_anonymizer" name="test_anonymize_text[Lorem ipsum-Lorem ipsum]" file="tests/test_skype_anonymizer.py" line="17" time="0.002"><failure message="AssertionError: assert None == 'Lorem ipsum'">text = 'Lorem ipsum', replaced = 'Lorem ipsum'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = SkypeUsernameAnonymizer("#")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       AssertionError: assert None == 'Lorem ipsum'
+
+tests/test_skype_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_skype_anonymizer" name="test_anonymize_text[Lorem ipsum &lt;a href=&quot;skype:loremipsum?call&quot;&gt;call&lt;/a&gt; dolor sit amet-Lorem ipsum &lt;a href=&quot;skype:#?call&quot;&gt;call&lt;/a&gt; dolor sit amet]" file="tests/test_skype_anonymizer.py" line="17" time="0.001"><failure message="assert None == 'Lorem ipsum &lt;a href=&quot;skype:#?call&quot;&gt;call&lt;/a&gt; dolor sit amet'">text = 'Lorem ipsum &lt;a href="skype:loremipsum?call"&gt;call&lt;/a&gt; dolor sit amet'
+replaced = 'Lorem ipsum &lt;a href="skype:#?call"&gt;call&lt;/a&gt; dolor sit amet'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = SkypeUsernameAnonymizer("#")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       assert None == 'Lorem ipsum &lt;a href="skype:#?call"&gt;call&lt;/a&gt; dolor sit amet'
+
+tests/test_skype_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_skype_anonymizer" name="test_anonymize_text[Lorem ipsum  &lt;a href=&quot;skype:loremipsum?call&quot;&gt;call&lt;/a&gt;, dolor sit &lt;a href=&quot;skype:IPSUMLOREM?chat&quot;&gt;chat&lt;/a&gt; amet-Lorem ipsum  &lt;a href=&quot;skype:#?call&quot;&gt;call&lt;/a&gt;, dolor sit &lt;a href=&quot;skype:#?chat&quot;&gt;chat&lt;/a&gt; amet]" file="tests/test_skype_anonymizer.py" line="17" time="0.002"><failure message="assert None == ('Lorem ipsum  &lt;a href=&quot;skype:#?call&quot;&gt;call&lt;/a&gt;, dolor sit &lt;a '\n 'href=&quot;skype:#?chat&quot;&gt;chat&lt;/a&gt; amet')">text = 'Lorem ipsum  &lt;a href="skype:loremipsum?call"&gt;call&lt;/a&gt;, dolor sit &lt;a href="skype:IPSUMLOREM?chat"&gt;chat&lt;/a&gt; amet'
+replaced = 'Lorem ipsum  &lt;a href="skype:#?call"&gt;call&lt;/a&gt;, dolor sit &lt;a href="skype:#?chat"&gt;chat&lt;/a&gt; amet'
+
+    @pytest.mark.parametrize("text,replaced", TEST_DATA)
+    def test_anonymize_text(text, replaced):
+        anonymizer = SkypeUsernameAnonymizer("#")
+&gt;       assert anonymizer.anonymize(text) == replaced
+E       assert None == ('Lorem ipsum  &lt;a href="skype:#?call"&gt;call&lt;/a&gt;, dolor sit &lt;a '\n 'href="skype:#?chat"&gt;chat&lt;/a&gt; amet')
+
+tests/test_skype_anonymizer.py:21: AssertionError</failure></testcase><testcase classname="tests.test_structure_base.StructureTestSuite" name="test_class_exists_baseanonymizer" file="tests/test_structure_base.py" line="11" time="0.001" /><testcase classname="tests.test_structure_base.StructureTestSuite" name="test_class_function_exists_baseanonymizer_anonymize" file="tests/test_structure_base.py" line="21" time="0.002" /><testcase classname="tests.test_structure_base.StructureTestSuite" name="test_class_function_signature_match_baseanonymizer_anonymize" file="tests/test_structure_base.py" line="43" time="0.002" /><testcase classname="tests.structure.test_base.StructureTestSuite" name="test_class_exists_baseanonymizer" file="tests/structure/test_base.py" line="11" time="0.002" /><testcase classname="tests.structure.test_base.StructureTestSuite" name="test_class_function_exists_baseanonymizer_anonymize" file="tests/structure/test_base.py" line="21" time="0.001" /><testcase classname="tests.structure.test_base.StructureTestSuite" name="test_class_function_signature_match_baseanonymizer_anonymize" file="tests/structure/test_base.py" line="43" time="0.002" /><testcase classname="tests.structure.test_email.StructureTestSuite" name="test_class_exists_emailanonymizer" file="tests/structure/test_email.py" line="11" time="0.001" /><testcase classname="tests.structure.test_email.StructureTestSuite" name="test_class_function_exists_emailanonymizer___init__" file="tests/structure/test_email.py" line="21" time="0.001" /><testcase classname="tests.structure.test_email.StructureTestSuite" name="test_class_function_exists_emailanonymizer_anonymize" file="tests/structure/test_email.py" line="111" time="0.001" /><testcase classname="tests.structure.test_email.StructureTestSuite" name="test_class_function_signature_match_emailanonymizer___init__" file="tests/structure/test_email.py" line="44" time="0.001" /><testcase classname="tests.structure.test_email.StructureTestSuite" name="test_class_function_signature_match_emailanonymizer_anonymize" file="tests/structure/test_email.py" line="134" time="0.002" /><testcase classname="tests.structure.test_offer.StructureTestSuite" name="test_class_exists_offeranonymizer" file="tests/structure/test_offer.py" line="11" time="0.001" /><testcase classname="tests.structure.test_offer.StructureTestSuite" name="test_class_function_exists_offeranonymizer___init__" file="tests/structure/test_offer.py" line="21" time="0.001" /><testcase classname="tests.structure.test_offer.StructureTestSuite" name="test_class_function_exists_offeranonymizer_add_anonymizer" file="tests/structure/test_offer.py" line="96" time="0.001" /><testcase classname="tests.structure.test_offer.StructureTestSuite" name="test_class_function_exists_offeranonymizer_anonymize" file="tests/structure/test_offer.py" line="186" time="0.001" /><testcase classname="tests.structure.test_offer.StructureTestSuite" name="test_class_function_signature_match_offeranonymizer___init__" file="tests/structure/test_offer.py" line="44" time="0.002" /><testcase classname="tests.structure.test_offer.StructureTestSuite" name="test_class_function_signature_match_offeranonymizer_add_anonymizer" file="tests/structure/test_offer.py" line="119" time="0.001" /><testcase classname="tests.structure.test_offer.StructureTestSuite" name="test_class_function_signature_match_offeranonymizer_anonymize" file="tests/structure/test_offer.py" line="209" time="0.002" /><testcase classname="tests.structure.test_phone.StructureTestSuite" name="test_class_exists_phonenumberanonymizer" file="tests/structure/test_phone.py" line="11" time="0.001" /><testcase classname="tests.structure.test_phone.StructureTestSuite" name="test_class_function_exists_phonenumberanonymizer___init__" file="tests/structure/test_phone.py" line="21" time="0.002" /><testcase classname="tests.structure.test_phone.StructureTestSuite" name="test_class_function_exists_phonenumberanonymizer_anonymize" file="tests/structure/test_phone.py" line="126" time="0.001" /><testcase classname="tests.structure.test_phone.StructureTestSuite" name="test_class_function_signature_match_phonenumberanonymizer___init__" file="tests/structure/test_phone.py" line="44" time="0.002" /><testcase classname="tests.structure.test_phone.StructureTestSuite" name="test_class_function_signature_match_phonenumberanonymizer_anonymize" file="tests/structure/test_phone.py" line="149" time="0.002" /><testcase classname="tests.structure.test_skype.StructureTestSuite" name="test_class_exists_skypeusernameanonymizer" file="tests/structure/test_skype.py" line="11" time="0.001" /><testcase classname="tests.structure.test_skype.StructureTestSuite" name="test_class_function_exists_skypeusernameanonymizer___init__" file="tests/structure/test_skype.py" line="21" time="0.001" /><testcase classname="tests.structure.test_skype.StructureTestSuite" name="test_class_function_exists_skypeusernameanonymizer_anonymize" file="tests/structure/test_skype.py" line="111" time="0.008" /><testcase classname="tests.structure.test_skype.StructureTestSuite" name="test_class_function_signature_match_skypeusernameanonymizer___init__" file="tests/structure/test_skype.py" line="44" time="0.002" /><testcase classname="tests.structure.test_skype.StructureTestSuite" name="test_class_function_signature_match_skypeusernameanonymizer_anonymize" file="tests/structure/test_skype.py" line="134" time="0.002" /></testsuite></testsuites>

@@ -3,7 +3,7 @@ import sys
 import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from anonymizers.phone_anonymizer import PhoneAnonymizer
+from anonymizer.phone_anonymizer import PhoneAnonymizer
 
 class TestPhoneAnonymizer(unittest.TestCase):
     def test_valid_phone_numbers(self):
